@@ -11,14 +11,33 @@ void setup() {
   Serial.begin(9600);
   Serial.println("IT'S THE FINAL COUNTDOWN.");
   initLight();    //activate lights
-  initMotors();   //activate motors
+
+  forward();
+  delay(600);
+  halt();
+  delay(200);
+  turnL();
+  delay(70);
+  halt();
+  delay(500);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
   flash(gc5); 
+  flash(gc5);
+  followBlack();
   flash(gc6);
+  flash(gc6);
+  followBlack();
   flash(gc7);
+  flash(gc7);
+  followBlack();
   flash(gc8);
-  flash(gc9);  
+  flash(gc8);
+  followBlack();
+  flash(gc9);
+  flash(gc9); 
+  //testSensors();
+  followBlack();
+
 }

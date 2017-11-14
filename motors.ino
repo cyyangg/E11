@@ -80,6 +80,18 @@ void turnR() {
 }
 
 
+//slightly turn right
+void slightR() {
+  digitalWrite(LEN, 1);
+  analogWrite(LPLUS, powerLevel-75);
+  digitalWrite(LMINUS, 0);
+  
+  digitalWrite(REN, 1);
+  digitalWrite(RPLUS, powerLevel);
+  analogWrite(RMINUS, 0);
+}
+
+
 //set power level, 255 max speed
 //note: power levels under around 220 start turning towards the left
 void setPL(int pl) {
